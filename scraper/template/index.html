@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Scraper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <div class="container">
+
+        <div class="row"> 
+            <div class="col-md-12 m-3 text-center">
+                <h1>Link Scraper</h1>
+            </div>
+        </div>
+
+        <div class="row m-5 text-center">
+            <div class="col-md-6">
+                <form method="POST" action="/">
+                    {% csrf_token %}
+                    <input type="text" class="form-control border border-dark" name="url" placeholder="provide the link">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+                </form>
+                <div class="col-md-2">
+                    <a class="btn btn-warning" href="/delete">Delete</a>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">Link</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for links in object %} 
+                      <tr>
+                        
+                        <td>{{links.id}}</td>
+                        <td>{{links.name}}</td>
+                        <td>{{links.address}}</td>
+                      </tr>
+                      {%endfor%}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
