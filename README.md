@@ -4,19 +4,21 @@
 
 <h2>Features: </h2>
    <ul>
-    <li>Provide the url (/)</li>
+    <li>Provide the url  (/)</li>
     <li>Get all the link present in that url</li>
-    <li>Can Delete the links when needed</li>
+    <li>Can Delete the scraped links when needed</li>
    </ul> 
 
 <h2>Screenshot:</h2>
 
 <h3>Home Page</h3>
 
+![home_page](https://github.com/Dinesh294/LinkScraperDjango/assets/84972612/aef3a933-fcb5-490e-b84f-d83e605dd99d)
 
 
-<h3>Get Link</h3>
+<h3>Scraped Link</h3>
 
+![link_page](https://github.com/Dinesh294/LinkScraperDjango/assets/84972612/8cd4c074-a1e9-4df4-878b-55f39f0f0b1e)
 
 
 <h2>Steps:</h2>
